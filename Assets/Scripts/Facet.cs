@@ -7,6 +7,7 @@ public class Facet : MonoBehaviour
     public int[] CubesWhichFind;
     void Start()
     {
+        // CODE-REVIEW: facet - означает грань, у кубика всего 6 граней
         if (transform.name == "Facet1")
         {
             CubesWhichFind = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26 };           

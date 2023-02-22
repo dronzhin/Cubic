@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// CODE-REVIEW: предалагаю переимновать класс в GenerationCube или в ElementsOfCubicRubic
 public static class ArrayCubes
 {
+    // CODE-REVIEW: это у нас hard-code. предлагаю избавиться от этого и сделать генерацию через циклы
     public static GameObject[] cubes =
     {
         GameObject.Find("Cube 1-1-1"), 

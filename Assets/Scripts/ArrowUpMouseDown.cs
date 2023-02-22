@@ -5,6 +5,7 @@ using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
 using Vector3 = UnityEngine.Vector3;
 
+// CODE-REVIEW: предлагаю перменовть класс в ArrowButton который бы обрабатывал нажатия на себя
 public class ArrowUpMouseDown : MonoBehaviour
 {
     [SerializeField] private GameObject facet;
@@ -12,7 +13,6 @@ public class ArrowUpMouseDown : MonoBehaviour
     private Facet currentFacet;
     private bool isNotClicker = true;
     private int corner = 0;
-
 
     void OnMouseUp()
     {
@@ -27,6 +27,7 @@ public class ArrowUpMouseDown : MonoBehaviour
         
     }
 
+    // CODE-REVIEW: закомментированный код удаляется
     //void Update()
     //{
     //    if (isNotClicker) return;
@@ -53,6 +54,7 @@ public class ArrowUpMouseDown : MonoBehaviour
     //        }
     //    }
     //}
+
     void Update()
     {
         if (isNotClicker) return;
@@ -88,6 +90,7 @@ public class ArrowUpMouseDown : MonoBehaviour
         }
     }
 
+    // CODE-REVIEW: hard-code - желательно избавиться
     private GameObject[] ChangeCubesArrowUp(GameObject[] arrayCubes, int[] changeCubes)
     {
         GameObject saveObject;
@@ -103,6 +106,8 @@ public class ArrowUpMouseDown : MonoBehaviour
         arrayCubes[changeCubes[5]] = saveObject;
         return arrayCubes;
     }
+
+    // CODE-REVIEW: hard-code - желательно избавиться
     private GameObject[] ChangeCubesArrowDown(GameObject[] arrayCubes, int[] changeCubes)
     {
         GameObject saveObject;
@@ -118,5 +123,4 @@ public class ArrowUpMouseDown : MonoBehaviour
         arrayCubes[changeCubes[3]] = saveObject;
         return arrayCubes;
     }
-
 }

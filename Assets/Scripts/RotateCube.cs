@@ -5,11 +5,12 @@ using UnityEngine;
 public class RotateCube : MonoBehaviour
 {
     // Start is called before the first frame update
+    // CODE-REVIEW: хорошее именование переменных
     private float speedRotate = 0.5f;
     private float horisoltalInput;
     private float verticalInput;
 
-
+    // CODE-REVIEW: не забываем про модификаторы доступа
     void Start()
     {
         
